@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <title>TOG AI Pulse &#8212; {{ edition_date }}</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <![endif]-->
+  <style type="text/css">
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    body { margin: 0; padding: 0; background-color: #EAEDF0; }
+    a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #EAEDF0;">
+
+<!-- Preheader text (hidden) -->
+<div style="display: none; max-height: 0; overflow: hidden; mso-hide: all;">TOG AI Pulse &#8212; {{ edition_date }} &#8212; {{ total_articles }} stories from WSJ, FT, The Information and TechCrunch &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203; &#8203;</div>
+
+<!-- Outer wrapper -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#EAEDF0">
+  <tr>
+    <td align="center" style="padding-top: 28px; padding-bottom: 36px;">
+
+      <!-- Email container: 600px -->
+      <table width="600" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; width: 100%;">
+
+        <!-- ===== TOP ORANGE ACCENT BAR ===== -->
+        <tr>
+          <td height="4" bgcolor="#E8640C" style="height: 4px; font-size: 1px; line-height: 1px; background-color: #E8640C; mso-line-height-rule: exactly;">&nbsp;</td>
+        </tr>
+
+        <!-- ===== HEADER ===== -->
+        <tr>
+          <td bgcolor="#1E3A5F" style="padding: 26px 40px 22px 40px; background-color: #1E3A5F;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td valign="middle">
+                  <!-- Brand name -->
+                  <p style="margin: 0; padding: 0; font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 26px; font-weight: bold; color: #FFFFFF; mso-line-height-rule: exactly; line-height: 32px; letter-spacing: -0.5px;">
+                    TOG AI Pulse
+                  </p>
+                  <p style="margin: 0; padding: 0; margin-top: 3px; font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 9px; color: #7A9BBF; mso-line-height-rule: exactly; line-height: 14px; letter-spacing: 2.5px; text-transform: uppercase;">
+                    Weekly Intelligence Briefing
+                  </p>
+                </td>
+                <td align="right" valign="middle">
+                  <p style="margin: 0; padding: 0; font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 10px; color: #7A9BBF; mso-line-height-rule: exactly; line-height: 15px; white-space: nowrap; letter-spacing: 0.5px; text-align: right; text-transform: uppercase;">
+                    Week of
+                  </p>
+                  <p style="margin: 0; padding: 0; margin-top: 3px; font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #FFFFFF; mso-line-height-rule: exactly; line-height: 18px; white-space: nowrap; text-align: right;">
+                    {{ week_range }}
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Header bottom rule: thin orange line -->
+        <tr>
+          <td height="2" bgcolor="#E8640C" style="height: 2px; font-size: 1px; line-height: 1px; background-color: #E8640C; mso-line-height-rule: exactly;">&nbsp;</td>
+        </tr>
+
+        <!-- ===== ARTICLES BY SECTION ===== -->
+        {% set ns = namespace(count=0) %}
+        {% for section in sections %}
+        {% if section.articles %}
+
+        <!-- Section header row -->
+        <tr>
+          <td bgcolor="#2C4A6B" style="padding: 9px 40px 9px 40px; background-color: #2C4A6B;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td valign="middle">
+                  <!-- Orange pill accent -->
+                  <table cellpadding="0" cellspacing="0" border="0" style="display: inline-table;">
+                    <tr>
+                      <td bgcolor="#E8640C" width="3" style="width: 3px; background-color: #E8640C; font-size: 1px; line-height: 1px;">&nbsp;</td>
+                      <td style="padding-left: 8px;">
+                        <p style="margin: 0; padding: 0; font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; color: #A8C4DE; mso-line-height-rule: exactly; line-height: 14px; letter-spacing: 2px; text-transform: uppercase;">
+                          {{ section.name }}
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td align="right" valign="middle">
+                  <p style="margin: 0; padding: 0; font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 9px; color: #4D6E8A; mso-line-height-rule: exactly; line-height: 14px; letter-spacing: 0.5px;">
+                    {{ section.articles | length }} article{% if section.articles | length != 1 %}s{% endif %}
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        {% for article in section.articles %}
+        {% set ns.count = ns.count + 1 %}
+
+        <!-- Article card -->
+        <tr>
+          <td bgcolor="#FFFFFF" style="padding: 24px 40px 24px 40px; border-bottom: 1px solid #E2E6EA; background-color: #FFFFFF;">
+
+            <!-- Meta row: number + source + date -->
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 10px;">
+              <tr>
+                <td valign="middle">
+                  <span style="font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color: #E8640C; mso-line-height-rule: exactly; line-height: 18px;">#{{ ns.count }}</span>
+                  <span style="font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 10px; color: #B0B9C4; mso-line-height-rule: exactly; line-height: 18px;">&nbsp;&nbsp;&#8231;&nbsp;&nbsp;</span>
+                  <span style="font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #6B7B8D; letter-spacing: 0.8px; text-transform: uppercase; mso-line-height-rule: exactly; line-height: 18px;">{{ article.source }}</span>
+                  <span style="font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 10px; color: #B0B9C4; mso-line-height-rule: exactly; line-height: 18px;">&nbsp;&nbsp;&#183;&nbsp;&nbsp;</span>
+                  <span style="font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 10px; color: #9CAAB6; mso-line-height-rule: exactly; line-height: 18px;">{{ article.pub_date }}</span>
+                </td>
+              </tr>
+            </table>
+
+            <!-- Article title -->
+            <p style="margin: 0; padding: 0; margin-bottom: 9px; mso-line-height-rule: exactly; line-height: 26px;">
+              <a href="{{ article.url }}" target="_blank" style="font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 17px; font-weight: bold; color: #1E3A5F; text-decoration: none; mso-color-alt: #1E3A5F;">{{ article.title }}</a>
+            </p>
+
+            <!-- One-liner summary -->
+            <p style="margin: 0; padding: 0; margin-bottom: 16px; font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 14px; color: #4B5563; mso-line-height-rule: exactly; line-height: 23px;">
+              {{ article.one_liner }}
+            </p>
+
+            <!-- Why it matters callout -->
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td bgcolor="#E8640C" width="3" style="width: 3px; background-color: #E8640C; font-size: 1px; line-height: 1px;">&nbsp;</td>
+                <td bgcolor="#FEF6F0" style="padding: 10px 16px 10px 16px; background-color: #FEF6F0;">
+                  <p style="margin: 0; padding: 0; margin-bottom: 4px; font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; color: #E8640C; letter-spacing: 1.8px; text-transform: uppercase; mso-line-height-rule: exactly; line-height: 13px;">
+                    Why it matters
+                  </p>
+                  <p style="margin: 0; padding: 0; font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 13px; color: #374151; mso-line-height-rule: exactly; line-height: 21px;">
+                    {{ article.why_it_matters }}
+                  </p>
+                </td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+
+        <!-- ===== DISRUPTION COMMENTARY ===== -->
+        {% if disruption_commentary %}
+        <tr>
+          <td bgcolor="#1E3A5F" style="padding: 30px 40px 32px 40px; background-color: #1E3A5F;">
+
+            <!-- Label + orange rule -->
+            <p style="margin: 0; padding: 0; margin-bottom: 12px; font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; color: #E8640C; letter-spacing: 2.5px; text-transform: uppercase; mso-line-height-rule: exactly; line-height: 14px;">
+              Where is the disruption this week?
+            </p>
+            <table width="36" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 16px;">
+              <tr>
+                <td bgcolor="#E8640C" height="2" style="height: 2px; font-size: 1px; line-height: 1px; background-color: #E8640C; mso-line-height-rule: exactly;">&nbsp;</td>
+              </tr>
+            </table>
+
+            <!-- Commentary text -->
+            <p style="margin: 0; padding: 0; font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 14px; color: #C9D8E8; mso-line-height-rule: exactly; line-height: 24px;">
+              {{ disruption_commentary }}
+            </p>
+
+          </td>
+        </tr>
+        {% endif %}
+
+        <!-- ===== FOOTER ===== -->
+        <tr>
+          <td bgcolor="#D8DCE0" style="padding: 18px 40px 18px 40px; background-color: #D8DCE0;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td align="center">
+                  <p style="margin: 0; padding: 0; font-family: Aptos, Calibri, Arial, Helvetica, sans-serif; font-size: 11px; color: #5A6470; mso-line-height-rule: exactly; line-height: 18px; text-align: center;">
+                    <span style="font-weight: bold; color: #1E3A5F;">TOG AI Pulse</span>
+                    &nbsp;&nbsp;&#124;&nbsp;&nbsp;Curated by Claude AI&nbsp;&nbsp;&#124;&nbsp;&nbsp;Every Monday
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- ===== BOTTOM ORANGE ACCENT BAR ===== -->
+        <tr>
+          <td height="4" bgcolor="#E8640C" style="height: 4px; font-size: 1px; line-height: 1px; background-color: #E8640C; mso-line-height-rule: exactly;">&nbsp;</td>
+        </tr>
+
+      </table>
+      <!-- /Email container -->
+
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

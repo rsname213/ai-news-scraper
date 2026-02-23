@@ -1,0 +1,36 @@
+TOG AI Pulse — {{ edition_date }}
+{{ week_range }}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+{% for section in sections %}
+{% if section.articles %}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{{ section.name | upper }}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+{% for article in section.articles %}
+[{{ article.source }}] {{ article.pub_date }}
+{{ article.title }}
+{{ article.url }}
+
+{{ article.one_liner }}
+
+WHY IT MATTERS:
+{{ article.why_it_matters }}
+
+---
+
+{% endfor %}
+{% endif %}
+{% endfor %}
+{% if disruption_commentary %}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHERE IS THE DISRUPTION THIS WEEK?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+{{ disruption_commentary }}
+
+{% endif %}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TOG AI Pulse · Curated by Claude AI · Every Monday
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
