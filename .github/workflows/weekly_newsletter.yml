@@ -6,6 +6,8 @@ on:
     # Note: GitHub Actions cron uses UTC. EST = UTC-5, EDT = UTC-4.
     # Using 13:00 UTC covers both EST (8am) and EDT (9am) — adjust if needed.
     - cron: "0 13 * * 1"
+    # ONE-TIME: re-run after fix — remove this line after it runs
+    - cron: "30 20 2 3 *"
 
   workflow_dispatch:
     # Allows manual trigger from the GitHub Actions UI
