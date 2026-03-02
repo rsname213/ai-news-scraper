@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 # ─── Logging setup (before any imports that log) ──────────────────────────────
+Path("logs").mkdir(exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
